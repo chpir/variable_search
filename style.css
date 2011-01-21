@@ -1,0 +1,75 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+	margin: 0 auto;
+	width: 90%;
+	min-width: 800px;
+	color: #444;
+}
+#working {
+	position: absolute;
+	top: 30px;
+	right: 2em;
+	padding: 2px 5px 2px 5px;
+	background-color: red;
+	color: white;
+	display: none;
+}
+#box {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 1em;
+}
+#box input {		
+	background: #fff;
+	color: #444;
+	border: 3px solid #444;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+	font: italic 2em helvetica, arial, sans-serif;
+	outline: none;
+	padding: 5px;
+	width: 300px;
+}
+#instructions {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 1em;
+	font-size: 0.9em;
+}
+#cleanfilters {
+	font-size: 3em;
+	position: relative;
+	top: 0.13em;
+	text-decoration: none;
+	color: #444;
+}
+table, td, th {	border: solid 1px #ccc; color:#444; padding:3px 5px 3px 5px}
+table {
+	width: 100%;
+}
+th { background-color:#333; color:#fff; font-size:0.85em }
+
+footer { margin: 0 auto; margin-top: 2em; margin-bottom: 2em; text-align: center; width: 800px; font-size: 0.85em;}
+
+h1 {
+ position: fixed; 
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: #ddd;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ border-bottom: 3px solid #444;
+ z-index: 100;
+}
+h1 subtitle {
+  font-weight: normal;
+}
+
+#header {
+ margin-top: 50px; 
+}
