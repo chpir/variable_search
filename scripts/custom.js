@@ -16,6 +16,7 @@ var grid = $('#vartable');
       grid.tableFilter(options1);
 $('input:text').keypress(function() {
 	$('#working').show();
+	$('#instructions').hide();
 });
 
 
