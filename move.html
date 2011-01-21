@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>MOVE Variable Search</title>
+    <script src="scripts/jquery.js" type="text/javascript"></script>    		    
+	<script type="text/javascript" src="scripts/picnet.table.filter.min.js"></script>
+	<script type="text/javascript" src="scripts/custom.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>MOVE <subtitle>/ variable search</subtitle></h1>
+	<div id="header">	
+	</div>
+	<div><b>Variables <span id='rowcount'></span></b></div>
+    <table id='vartable'>
+        <thead>
+            <tr><th>Name</th><th style="width: 100px;" filter-type='ddl'>Table</th><th>Label</th><th filter='false'>Forms</th></tr>
+        </thead>
+        <tbody>
+			<tr><td>attachment_1</td><td>attachment</td><td>1. i share an affectionate, warm relationship with this child.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_10</td><td>attachment</td><td>10. this child remains angry or is resistant after being disciplined.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_11</td><td>attachment</td><td>11. dealing with this child drains my energy</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_12</td><td>attachment</td><td>12. when this child is in a bad mood, i know were in for a long and difficult day.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_13</td><td>attachment</td><td>13. this child s feelings toward me can be unpredictable or can change suddenly.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_14</td><td>attachment</td><td>14. this child is sneaky or manipulative with me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_15</td><td>attachment</td><td>15. this child openly shares his/her feelings and experiences with me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_2</td><td>attachment</td><td>2. this child and i always seem to be struggling with each other.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_3</td><td>attachment</td><td>3. if upset, this child will seek comfort from me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_4</td><td>attachment</td><td>4. this child is uncomfortable with physical affection or touch from me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_5</td><td>attachment</td><td>5. this child values his/her relationship with me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_6</td><td>attachment</td><td>6. when i praise this child, he/she beams with pride.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_7</td><td>attachment</td><td>7. this child spontaneously shares information about himself/herself.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_8</td><td>attachment</td><td>8. this child easily becomes angry with me.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_9</td><td>attachment</td><td>9. it is easy to be in tune with what this child is feeling.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>attachment_change</td><td>attachment</td><td>16. my relationship with this child has gotten stronger, remained the same, or gotte</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_age</td><td>caregivermaster</td><td>Caregiver Age</td><td>frm00_NewChildMaster frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_district</td><td>caregivermaster</td><td>Caregiver District</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_ethnicity</td><td>caregivermaster</td><td>Caregiver Ethnicity</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_gender</td><td>caregivermaster</td><td>Caregiver Gender</td><td>frm00_NewChildMaster frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_howlong_mm</td><td>caregivermaster</td><td>XM2. How long have you lived in this community? - Months</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_howlong_yy</td><td>caregivermaster</td><td>XM2. How long have you lived in this community? - Years</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>cg_name</td><td>caregivermaster</td><td>Caregiver Name</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>cg_region</td><td>caregivermaster</td><td>Region</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q31</td><td>caregivermaster</td><td>31. What Is Your Marital Status?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q32bt</td><td>caregivermaster</td><td>32B. Up To What Standard/Class Have You Completed?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q34a</td><td>caregivermaster</td><td>34A. What Is Your Religion Or Belief System?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q34at</td><td>caregivermaster</td><td>34A. What Is Your Religion Or Belief System? Specify</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>xm1</td><td>caregivermaster</td><td>XM1. Are you Malawian by birth?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>xm1_country</td><td>caregivermaster</td><td>XM1. Are you Malawian by birth? - No, specify Country</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q63</td><td>cg_health</td><td>63. Women Only. Are You Pregnant?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q64</td><td>cg_health</td><td>64. Women Only: Are You Breastfeeding?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q64a</td><td>cg_health</td><td>64a. How old is the child you are breastfeeding?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q64b</td><td>cg_health</td><td>64b. Is the baby fed breast milk only or other foods also?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q65a1</td><td>cg_health</td><td>65A1. Overall, How Would You Rate Your Health During The Past 4 Weeks?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q65a2</td><td>cg_health</td><td>65a2. During the past 4 weeks, how much did physical health problems limit your usual physical activities?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q65a7</td><td>cg_health</td><td>65a7. During the past 4 weeks, how much have you been bothered by emotional problems?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q65x</td><td>cg_health</td><td>65X Compared With The Last Time We Talked, Wojuld You Say Your Health Is Better,</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q66a</td><td>cg_health</td><td>66A. Have You Had Any Difficulty Caring For (Child) Due To Your Own Health Probl</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q66d_persons</td><td>cg_health</td><td>66D. Who Did You Receive Help From? - Concatenated Persons</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q66d_specify</td><td>cg_health</td><td>66D. Who Did You Receive Help From? - Specify</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q69a</td><td>cg_health</td><td>69A. Have You Made A Will? Omit India</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q69b</td><td>cg_health</td><td>69B. Does It Specify Whom You Wish To Take Care Of (Child)? Omit India</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q73b_ranks</td><td>cg_health</td><td>73B. What Worries You The Most? Concatenated Ranks 1-3.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q73b_specify1</td><td>cg_health</td><td>73B. What Worries You The Most? Rank 1-3.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q73b_specify2</td><td>cg_health</td><td>73B. What Worries You The Most? Rank 1-3.</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q88</td><td>cg_health</td><td>88. How many times did you visit a health center or health practitioner in the last 6 months due to a health problem?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q92a</td><td>cg_health</td><td>92A. Do You Need Any Health Services You Are Not Receiving?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q92b_services</td><td>cg_health</td><td>92B. Services (Concatenated)</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q92b_specify</td><td>cg_health</td><td>92B. Services Other - Specify</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q54x1</td><td>cg_incomeactivity</td><td>54X1. How Many Days Per Week, On Average, Do You Work Away From Home?</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q54x2</td><td>cg_incomeactivity</td><td>54X2. On Those Days, How Many Hours Do You Spend At Home? - At Home</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q54x2a</td><td>cg_incomeactivity</td><td>54X2. On Those Days, How Many Hours Do You Spend At Home? - Away From Home</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>food1</td><td>child_basicneedswork</td><td>1. Compared to other children, is the child growing well?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>food2</td><td>child_basicneedswork</td><td>2. Do you think the child is seriously malnourished?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>food3</td><td>child_basicneedswork</td><td>3. Did the child have anything to eat yesterday?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>food4</td><td>child_basicneedswork</td><td>4. Did the child eat some starch yesterday?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>food5</td><td>child_basicneedswork</td><td>5. Did the child eat some protein yesterday?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>food6</td><td>child_basicneedswork</td><td>6. Did the childeat any fruit or vegetables yesterday?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>food7</td><td>child_basicneedswork</td><td>7. Does any of come from a family/community garden?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q20ax</td><td>child_basicneedswork</td><td>20Ax. During The Past Week, Did The Child Do Any Kind Of Work That Is Income Gen</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510</td></tr>
+			<tr><td>q20ax1</td><td>child_basicneedswork</td><td>20Ax1. What Kind Of Work Did The Child Do?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q20ax2</td><td>child_basicneedswork</td><td>20Ax2. About How Many Hours Last Week Did She/He Do This Work?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q21ax</td><td>child_basicneedswork</td><td>21Ax. During The Past Week, Did The Child Do Any Household Chores, Such As Farmi</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510</td></tr>
+			<tr><td>q21ax2</td><td>child_basicneedswork</td><td>21Ax2. About How Many Hours Last Week Did She/He Do This Work?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q67</td><td>child_basicneedswork</td><td>67. Who Would Care For ( Child) If, In The Future, You Were Unable To? - Option</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q67_specify</td><td>child_basicneedswork</td><td>67. Who Would Care For ( Child) If, In The Future, You Were Unable To? - Specify</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>q78a</td><td>child_basicneedswork</td><td>78A. Since Last Visit: How Often Did (Child) Go Without Getting Enough To Eat?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q81</td><td>child_basicneedswork</td><td>81. Does (Child) Have More Than One Set Of Day Clothes?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xm1</td><td>child_basicneedswork</td><td>XM1. Is child currently attending a CBCC?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm2</td><td>child_basicneedswork</td><td>XM2. How many km are there between home and the CBCC?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm3</td><td>child_basicneedswork</td><td>XM3. Does the child go to Children's Corner</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm3_km</td><td>child_basicneedswork</td><td>XM3a. How far is the nearest Children's Corner? (km, DK=999)</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm4</td><td>child_basicneedswork</td><td>XM4. Does the child have any legal issues?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm4a_issues</td><td>child_basicneedswork</td><td>XM4a. Please describe the legal issues - Other Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>xm4a_specify</td><td>child_basicneedswork</td><td>XM4a. Please describe the legal issues (concatenated)</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>date</td><td>child_biometrics</td><td>Date of Measurement</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>head1</td><td>child_biometrics</td><td>Head circumference - measure 1</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>head2</td><td>child_biometrics</td><td>Head circumference - measure 2</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>head3</td><td>child_biometrics</td><td>Head circumference - measure 3</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>height</td><td>child_biometrics</td><td>Child Height</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>scale</td><td>child_biometrics</td><td>Number Of Scale Used For Measurement (Used For Calibration)</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>weight</td><td>child_biometrics</td><td>Child Weight</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>date</td><td>child_crswellbeing</td><td>CRS date of assessment</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q1</td><td>child_crswellbeing</td><td>1. I eat at least two meals a day</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q10</td><td>child_crswellbeing</td><td>10. I feel secure in my neighborhood</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q11</td><td>child_crswellbeing</td><td>11. I feel safe where I live</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q12</td><td>child_crswellbeing</td><td>12. My school attendance is affected by my need to work</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q13</td><td>child_crswellbeing</td><td>13. My family has enough money to buy the things we need</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q14</td><td>child_crswellbeing</td><td>14.  One of the adults taking care of us (me) earns money working at a job</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q15</td><td>child_crswellbeing</td><td>15. I?m treated differently from the other children in my household</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q16</td><td>child_crswellbeing</td><td>16. I?m treated the same as other children in my school</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q17</td><td>child_crswellbeing</td><td>17. I?m treated differently from other children in my village, neighborhood, compound</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q18</td><td>child_crswellbeing</td><td>18. I do not get enough sleep and feel tired because of all the work I do before and after school</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q19</td><td>child_crswellbeing</td><td>19. I have people I can talk to when I have a problem</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q2</td><td>child_crswellbeing</td><td>2. I have enough food to eat</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q20</td><td>child_crswellbeing</td><td>20. I am able to do things as well as most other people</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q21</td><td>child_crswellbeing</td><td>21. I am as happy as other kids my age</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q22</td><td>child_crswellbeing</td><td>22. I feel I live in a safe place</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q23</td><td>child_crswellbeing</td><td>23. At home, I have someone to look after me if I get hurt or feel sad</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q24</td><td>child_crswellbeing</td><td>24. I  have adults that I can trust</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q25</td><td>child_crswellbeing</td><td>25.  I get the emotional help and support I need from my family</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q26</td><td>child_crswellbeing</td><td>26.  I feel I am supported by my extended family</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q27</td><td>child_crswellbeing</td><td>27. I feel strong and healthy</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q28</td><td>child_crswellbeing</td><td>28. I worry about my health</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q29</td><td>child_crswellbeing</td><td>29. My health is good.</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q3</td><td>child_crswellbeing</td><td>3. I go to bed hungry</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q30</td><td>child_crswellbeing</td><td>30. I am growing as well as other kids my age</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q31</td><td>child_crswellbeing</td><td>31. My belief in God gives me strength to face difficulties</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q32</td><td>child_crswellbeing</td><td>32. My belief in God gives me comfort and reassurance</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q33</td><td>child_crswellbeing</td><td>33.  My faith community is important to me</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q34</td><td>child_crswellbeing</td><td>34.  People in my community try to help me</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q35</td><td>child_crswellbeing</td><td>35.  I feel welcome to take part in religious services</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q36</td><td>child_crswellbeing</td><td>36.  My household receives free support to care for the children who live here</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q4</td><td>child_crswellbeing</td><td>4. My teachers treat me like the other students</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q5</td><td>child_crswellbeing</td><td>5. I have the materials I need to do my class work</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q6</td><td>child_crswellbeing</td><td>6. I am not treated as well as the other students in my class</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q7</td><td>child_crswellbeing</td><td>7.  I like school</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q8</td><td>child_crswellbeing</td><td>8.  I have enough books and supplies for school</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>q9</td><td>child_crswellbeing</td><td>9.   I have a house where I can sleep at night</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>remarks</td><td>child_crswellbeing</td><td>Remarks</td><td>frmCRSWellbeingReport</td></tr>
+			<tr><td>agency_1</td><td>child_csi</td><td>1. food - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_10</td><td>child_csi</td><td>10. social - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_11</td><td>child_csi</td><td>11. performance - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_12</td><td>child_csi</td><td>12. education - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_2</td><td>child_csi</td><td>2. nutrition - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_3</td><td>child_csi</td><td>3. shelter - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_4</td><td>child_csi</td><td>4. care - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_5</td><td>child_csi</td><td>5. abuse - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_6</td><td>child_csi</td><td>6. legal - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_7</td><td>child_csi</td><td>7. wellness - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_8</td><td>child_csi</td><td>8. healthcare - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>agency_9</td><td>child_csi</td><td>9. emotional - agency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>cginterviewdate</td><td>child_csi</td><td>Caregiver Interview: Date</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>cginterviewer</td><td>child_csi</td><td>Caregiver Interview: Interviewer</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>comments</td><td>child_csi</td><td>Comments</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_1</td><td>child_csi</td><td>1. food</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_10</td><td>child_csi</td><td>10. social</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_11</td><td>child_csi</td><td>11. performance</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_12</td><td>child_csi</td><td>12. education</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_2</td><td>child_csi</td><td>2. nutrition</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_3</td><td>child_csi</td><td>3. shelter</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_4</td><td>child_csi</td><td>4. care</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_5</td><td>child_csi</td><td>5. abuse</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_6</td><td>child_csi</td><td>6. legal</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_7</td><td>child_csi</td><td>7. wellness</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_8</td><td>child_csi</td><td>8. healthcare</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>csi_9</td><td>child_csi</td><td>9. emotional</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>emergency</td><td>child_csi</td><td>Plan for emergency</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>events</td><td>child_csi</td><td>Important events</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>events_other</td><td>child_csi</td><td>Important events - other</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>resources</td><td>child_csi</td><td>Suggestions for resources</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_1</td><td>child_csi</td><td>1. food - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_10</td><td>child_csi</td><td>10. social - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_11</td><td>child_csi</td><td>11. performance - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_12</td><td>child_csi</td><td>12. education - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_2</td><td>child_csi</td><td>2. nutrition - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_3</td><td>child_csi</td><td>3. shelter - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_4</td><td>child_csi</td><td>4. care - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_5</td><td>child_csi</td><td>5. abuse - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_6</td><td>child_csi</td><td>6. legal - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_7</td><td>child_csi</td><td>7. wellness - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_8</td><td>child_csi</td><td>8. healthcare - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>services_9</td><td>child_csi</td><td>9. emotional - services</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>source</td><td>child_csi</td><td>Source of information</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>source_other</td><td>child_csi</td><td>Source of information - other</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_1</td><td>child_csi</td><td>1. food - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_10</td><td>child_csi</td><td>10. social - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_11</td><td>child_csi</td><td>11. performance - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_12</td><td>child_csi</td><td>12. education - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_2</td><td>child_csi</td><td>2. nutrition - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_3</td><td>child_csi</td><td>3. shelter - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_4</td><td>child_csi</td><td>4. care - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_5</td><td>child_csi</td><td>5. abuse - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_6</td><td>child_csi</td><td>6. legal - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_7</td><td>child_csi</td><td>7. wellness - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_8</td><td>child_csi</td><td>8. healthcare - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>terminated_9</td><td>child_csi</td><td>9. emotional - terminated</td><td>frmCSI_Recordform</td></tr>
+			<tr><td>q1</td><td>child_development</td><td>Red Ring: Hold red ring in front of child. Does the child reach for ring?</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q1</td><td>child_development</td><td>Red Ring: Hold ring at eye level within arm's reach of child. Does child reach for ring? (FM3.1)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q1</td><td>child_development</td><td>YELLOW PEGS: Demonstrate placement of 1 peg.  Invite child to place all of the pegs, and set pegs beside board.  Pegs placed in 30 seconds? (FM20.0)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q10</td><td>child_development</td><td> that is, does child use parent as a safety zone? (C14)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q10</td><td>child_development</td><td>Does he use several fingers opposed to thumb? (FM7.4)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q10</td><td>child_development</td><td>Hand child one cube. Does the child pick up the cube directly and well? (FM5.7)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q11</td><td>child_development</td><td>Can child use two word sentences?  (L20.6)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q11</td><td>child_development</td><td>Does he pick up pellet with thumb and forefinger only? (pincer grasp) (FM8.9)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q11</td><td>child_development</td><td>Offer a second cube. Does child reach for second cube? (FM5.4)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q12</td><td>child_development</td><td>Can child name 1 of 3 common objects (such as shoe, cup, ball; objects purchased locally; L17.8)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q12</td><td>child_development</td><td>Can child transfer to other hand? (FM5.5)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q12</td><td>child_development</td><td>Let child see you put pellet in clear bottle. Hand bottle to child. Does she dump pellet out? Or, is you show the child how to dump the pellet out, can she imitate you and dump it out? (C13.4)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q13</td><td>child_development</td><td>Can child name 3 of the common objects? (such as shoe, cup, ball; objects purchased locally) (L24.0)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q13</td><td>child_development</td><td>Does child jabber expressively? (L7.0)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q13</td><td>child_development</td><td>Offer a third cube. Is the child able to hold on to the two cubes in hand without dropping one to reach? (FM6.3)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q14</td><td>child_development</td><td> (Can use caregiver report; L10.1)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q14</td><td>child_development</td><td>Does the child try to get the third cube by banging at it, reaching with mouth, or trying to hold all three? (FM7.6)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q14</td><td>child_development</td><td>Show child card of 4 pictures. Can she name three of them? (L22.1)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q15</td><td>child_development</td><td> for only cries. (L14.6)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q15</td><td>child_development</td><td>) (L24.7)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q15</td><td>child_development</td><td>Is there complete opposition of thumb (radial-digital)? (FM6.9)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q16</td><td>child_development</td><td>Can child name 5 of the 8 pictures? (L25.0)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q16</td><td>child_development</td><td>Does the child say at least two clear words? (L14.2)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q16</td><td>child_development</td><td>Social: Does child recognize parent? (L2.0)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q17</td><td>child_development</td><td>Does child smile when played with? (L2.1)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q17</td><td>child_development</td><td>Does the child seem to want to be near parent when stranger is around? (12.0)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q17</td><td>child_development</td><td>MOTOR SKILLS. Can child walk backwards?  (Examiner can demonstrate; GM14.6)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q18</td><td>child_development</td><td>Can child stand on one foot while holding on to person or furniture? (Either or both feet; GM16)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q18</td><td>child_development</td><td>Does child make nonspecific speech sounds? 2 sounds (L2.3)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q18</td><td>child_development</td><td>Gross Motor: Does child clap or bang objects in midline? (Can give child 2 cubes and demonstrate banging them together.) (FM8.6)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q19</td><td>child_development</td><td>Can child stand on one foot alone? (Imitating examiner) (GM22.5)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q19</td><td>child_development</td><td>Can the child walk with the help of one hand? (GM9.6)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q19</td><td>child_development</td><td>Is child playful with adult and toy together (person-object integration)? (C6.0)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q2</td><td>child_development</td><td> if reaches with both hands.</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q2</td><td>child_development</td><td>Pegs placed in 22 seconds? (FM26.6)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q2</td><td>child_development</td><td>With one hand? (FM5.4)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q20</td><td>child_development</td><td> or equivalent (L7.9)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q20</td><td>child_development</td><td>Can child jump off floor with both feet? (GM23.4)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q20</td><td>child_development</td><td>Can the child pull up holding onto furniture or objects? (GM8.6)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q21</td><td>child_development</td><td>Does child look toward parent when stressed or with a new person? (C8.0)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q21</td><td>child_development</td><td>Does child stand alone? (GM11.0)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q21</td><td>child_development</td><td>Walks up steps alone, both feet on each step. (GM25.1)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q22</td><td>child_development</td><td>Can child walk independently? (GM11.7)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q22</td><td>child_development</td><td>Gross Motor: Can the child sit alone for at least 30 seconds? (GM6.0)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q22</td><td>child_development</td><td>Walks down steps alone, both feet on each step. (GM25.8)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q23</td><td>child_development</td><td>Can child throw a ball (not just drop the ball?) (GM14.1)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q23</td><td>child_development</td><td>Does the child roll from back to stomach? (Use toy to try to get child to roll) (GM6.4)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q24</td><td>child_development</td><td>Can the child sit alone with good coordination and play with toys? (GM6.9)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q25</td><td>child_development</td><td>Put child on stomach. Does he get up on hands and knees? (GM7.1)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q26</td><td>child_development</td><td>Hold child in standing. Can she do any early stepping? (GM7.4)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q3</td><td>child_development</td><td>Can the child dangle the ring by the string? (Do it for the child; hand him string to imitate you.) (C12.4)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q3</td><td>child_development</td><td>Does the child transfer ring from one hand to the other? (FM5.5)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q3</td><td>child_development</td><td>PINK FORM BOARD: Set in front of child completed. Remove shapes and place in front of child. Indicate child to complete.</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q4</td><td>child_development</td><td>Cubes: Show child banging two cubes in midline. Can she imitate you? (FM8.6)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q4</td><td>child_development</td><td>Does child place round block correctly? (C/FM16.8)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q4</td><td>child_development</td><td>Place the ring out of the child's reach; give the child the string. Does the child pull the string to get the ring? (C5.7)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q5</td><td>child_development</td><td>Does child place all 3 blocks correctly? (C/FM21.2)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q5</td><td>child_development</td><td>Does the child pull the string to get the ring directly and with clear purpose? (C7.1)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q5</td><td>child_development</td><td>Hand the child one cube. Hold cup and demonstrate putting a cube in the cup. Ask child to do it. Can he put one cube in the cup after being shown? (FM/C9.4)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q6</td><td>child_development</td><td>Bell: Ring the bell lightly. Does the child show interest in the sound by brightening and turning head to sound? (C3.8)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q6</td><td>child_development</td><td>Does the child put three cubes in a cup? (FM/C11.8)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q6</td><td>child_development</td><td>If successful, remove shapes and turn form board in reverse. Ask child to complete. (FM/C25.4)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q7</td><td>child_development</td><td>Give the bell to the child. Does she turn it over and show interest in it? (C6.5)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q7</td><td>child_development</td><td>RED CUBES: Can child build a tower of 3 cubes? (FM16.7)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q7</td><td>child_development</td><td>Show child building a tower of two, three, and four cubes. Put one in front of him and hand him one more. Does he build a two block tower? (FM13.8)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q8</td><td>child_development</td><td>Can child build a tower of 6 cubes? (FM22.4)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>q8</td><td>child_development</td><td>Does the child put nine cubes in cup? (FM/C14.3)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q8</td><td>child_development</td><td>Does the child ring the bell with purpose? (C7.8)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q9</td><td>child_development</td><td>Cubes: When child holds the cube, is there opposition of thumb (radial-palmar)? (FM4.9)</td><td>frmCHDevelopment0306</td></tr>
+			<tr><td>q9</td><td>child_development</td><td>Pellet and bottle: Hold pellet in your hand out to child. Does he scoop it up? (FM6.8)</td><td>frmCHDevelopment0714</td></tr>
+			<tr><td>q9</td><td>child_development</td><td>Show child train of cubes. Mix up blocks; ask child to do it. (26.1)</td><td>frmCHDevelopment1625</td></tr>
+			<tr><td>remarks</td><td>child_development</td><td>Remarks</td><td>frmCHDevelopment0306 frmCHDevelopment0714 frmCHDevelopment1625</td></tr>
+			<tr><td>q19c</td><td>child_education</td><td>19C. Is (Child) Currently Attending School?</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19c1_grade</td><td>child_education</td><td>19C. Is (Child) Currently Attending School? - No, Last: Which Grade</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19c1_grade</td><td>child_education</td><td>19C. Is (Child) Currently Attending School? - No: Last: Which Grade</td><td>frmBL1a_SelfReport_0510</td></tr>
+			<tr><td>q19c_grade</td><td>child_education</td><td>19C. Is (Child) Currently Attending School? - Yes: Which Grade</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19d</td><td>child_education</td><td>19D. Are (Child?S) School Fees Paid Up To Date?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19dx_whopaid</td><td>child_education</td><td>19dX. Who paid for this child's school fees? - Concatenated</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19dx_whopaid1</td><td>child_education</td><td>19dX. Who paid for this child's school fees? - Specify Organization</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19dx_whopaid2</td><td>child_education</td><td>19dX. Who paid for this child's school fees? - Specify Other</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19e_reasons</td><td>child_education</td><td>19E. Why Isnt (Child) Attending School? (Concatenated)</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19e_specify</td><td>child_education</td><td>19E. Why Isnt (Child) Attending School? - Other - Specify</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19x1</td><td>child_education</td><td>19X1. Please Rank The Childs Performance In School Option</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19x1_grade</td><td>child_education</td><td>19X1. Please Rank The Childs Performance In School - Grade</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19x1_rank</td><td>child_education</td><td>19X1. Please Rank The Childs Performance In School - Child Rank</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19x1_total</td><td>child_education</td><td>19X1. Please Rank The Childs Performance In School - Number Of Children In Class</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q19x2_mm</td><td>child_education</td><td>19.X2. When Did (Child) Last Attend School? Month</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19x2_yy</td><td>child_education</td><td>19.X2. When Did (Child) Last Attend School? Year</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q19x5</td><td>child_education</td><td>19X5. Has The Child Ever Attended Any English Classes?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q20ax</td><td>child_education</td><td>20aX. During the past week, did the child do any work to bring in money for the household?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q21ax</td><td>child_education</td><td>21aX. During the past week, did the child do any household chores?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>alcohol</td><td>child_health</td><td>Alcohol: Do you drink any drinks with alcohol?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>dev1</td><td>child_health</td><td>Dev 1. Do you know how old the child was when he/she first walked independently?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>dev1a</td><td>child_health</td><td>Dev 2. Approximately how many months was the child was when he/she first walked?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>dev2</td><td>child_health</td><td>Dev 3. Do you know how old the child was when he/she first talked?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>dev2a</td><td>child_health</td><td>Dev 4. Approximately how many months old when he/she first talked?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>dev3</td><td>child_health</td><td>Dev 5. From your observation, how is this child developing?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>drugs</td><td>child_health</td><td>Drugs:  Do you use Drugs</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>drugs_specify</td><td>child_health</td><td>Drugs:  Do you use Drugs - Specify</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>gethiv</td><td>child_health</td><td>List 3 ways to get HIV (Concatenated)</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>gethiv_specify</td><td>child_health</td><td>List 3 ways to get HIV - Other, specify</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>hiv1</td><td>child_health</td><td>HIV1: Do you know what HIV/AIDS is?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>hiv2</td><td>child_health</td><td>HIV2: Do you know how people get HIV/AIDS?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>illness1</td><td>child_health</td><td>1. Has the child had malaria in the past 6 months</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness2</td><td>child_health</td><td>2. Did she get medicince for malaria?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness3</td><td>child_health</td><td>3. Has the child had TB during the past 6 months</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness4</td><td>child_health</td><td>4. Did she get medicine for tuberculosis?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness5</td><td>child_health</td><td>5. Has the child been tested for the HIV/AIDS virus</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness6</td><td>child_health</td><td>6. How long ago has the child been tested for the HIV/AIDS virus</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness7</td><td>child_health</td><td>7. Was it part of followup from birth (PMTCT)</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>illness8</td><td>child_health</td><td>8. Do you believe the child has the HIV/AIDS virus?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>preventhiv</td><td>child_health</td><td>List 3 ways to prevent HIV (Concatenated)</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>preventhiv_specify</td><td>child_health</td><td>List 3 ways to prevent HIV - Other, specify</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q87</td><td>child_health</td><td>87. Would You Say (Childs) Health Is Very Good, Good, Fair, Poor, Or Very Poor?</td><td>frmBL1_ChildSurvey frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q87x</td><td>child_health</td><td>87X. Is The Childs Health Now Better, About The Same, Or Worse Than The Last Tim</td><td>frmBL1_ChildSurvey frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q87x2a</td><td>child_health</td><td>87X2A. Why do you think that the child has the HIV virus</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x2a_specify</td><td>child_health</td><td>87X2A. Why Do You Believe So? Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x3</td><td>child_health</td><td>87X3. Is child taking HIV medicine?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x4</td><td>child_health</td><td>87X4. Drugs:  Do You Believe That This Child Is Using Drugs Such As Marijuana, A</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x4_specify1</td><td>child_health</td><td>87X4. Health care - Where? Specify Hospital</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x4_specify2</td><td>child_health</td><td>87X4. Health care - Where? Specify Health Center</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q87x4_specify3</td><td>child_health</td><td>87X4. Health care - Where? Specify CBO/NGO</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q88</td><td>child_health</td><td>88. How many times did the child visit a health center or health practitioner in the last 6 months?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q88x</td><td>child_health</td><td>88x. How many times has the child visited a health center ... for other services...in the last 6 months?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q89</td><td>child_health</td><td>89. How Many Times Has (Child) Been Hospitalized Since Last Visit?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q89x</td><td>child_health</td><td>89.X What Was The Reason For The Hospitalization(S)?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q92a</td><td>child_health</td><td>92A. Does (Child) Need Any Health Services He/She Is Not Receiving?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q92b_services</td><td>child_health</td><td>92B. Services (Concatenated)</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q92b_specify</td><td>child_health</td><td>92B. Services Other - Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q95x3</td><td>child_health</td><td>95X3. Is The Child Taking Any Medications?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q95x3_specify1</td><td>child_health</td><td>95X3. Yes: Which Medication</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q95x4</td><td>child_health</td><td>95X4. Are there medicines the child should be taking?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q95x4_specify</td><td>child_health</td><td>95X4. Are there medicines the child should be taking? - Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q95x5</td><td>child_health</td><td>95X5. Is the child sleeping under a bed net?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q96</td><td>child_health</td><td>96. How Is (Child) Feeling Today?</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q96</td><td>child_health</td><td>96. How Is (Orphaned Child) Feeling Today?</td><td>frmBL1a_SelfReport_0510</td></tr>
+			<tr><td>q98ax</td><td>child_health</td><td>98Ax. Has The Child Been Sick Since The Last Visit?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98ax_days</td><td>child_health</td><td>98Ax. How Many Days Has The Child Been Sick Since The Last Visit?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98bx2w_06_specify</td><td>child_health</td><td>98Bx2w. Symptoms - Pain Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98bx2w_12_specify</td><td>child_health</td><td>98Bx2w. Symptoms - Other Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98bx2w_13_specify</td><td>child_health</td><td>98Bx2w. Symptoms - Injury Specify</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98bx2w_symptoms</td><td>child_health</td><td>98Bx2w. Symptoms 2 weeks (Concatenated)</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>q98bx_06_specify</td><td>child_health</td><td>98Bx. Symptoms - Pain Specify</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q98bx_12_specify</td><td>child_health</td><td>98Bx. Symptoms - Other Specify</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q98bx_13_specify</td><td>child_health</td><td>98Bx. Symptoms - Injury Specify</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>q98bx_symptoms</td><td>child_health</td><td>98Bx. Symptoms (Concatenated)</td><td>frmBL1_ChildSurvey frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>adultcare</td><td>child_hopeandfuture</td><td>26. Is there one adult person who cares about you who you can go to for help if you are worried or need guidance?</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>adultcarewho</td><td>child_hopeandfuture</td><td>26. If yes, who is that person?</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>church</td><td>child_hopeandfuture</td><td>27. During the past year, did you attend a regular service at a church, mosque or temple?</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>date</td><td>child_hopeandfuture</td><td>Date - Hope and Future questionnaire</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q1</td><td>child_hopeandfuture</td><td>1. I think I am doing well</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q10</td><td>child_hopeandfuture</td><td>10. Go to school</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q11</td><td>child_hopeandfuture</td><td>11. Have a strong religious / spiritual part of your life</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q12</td><td>child_hopeandfuture</td><td>12. Have money / possessions</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q13</td><td>child_hopeandfuture</td><td>13. Have a good marriage</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q14</td><td>child_hopeandfuture</td><td>14. Be happy</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q15</td><td>child_hopeandfuture</td><td>15. Have a good place to live</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q16</td><td>child_hopeandfuture</td><td>16. You will finish school</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q17</td><td>child_hopeandfuture</td><td>17. You will have a problem finding a job (as an adult)</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q18</td><td>child_hopeandfuture</td><td>18. You will not work (as an adult)</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q19</td><td>child_hopeandfuture</td><td>19. You will have children</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q2</td><td>child_hopeandfuture</td><td>2. I can get the things in life that are most important</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q20</td><td>child_hopeandfuture</td><td>20. You (your partner) will become pregnant</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q21</td><td>child_hopeandfuture</td><td>21. You will get married</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q22</td><td>child_hopeandfuture</td><td>22. You will get divorced</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q23</td><td>child_hopeandfuture</td><td>23. You will have a good family</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q24</td><td>child_hopeandfuture</td><td>24. You will stay healthy</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q3</td><td>child_hopeandfuture</td><td>3. I am doing as well as other kids my age</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q4</td><td>child_hopeandfuture</td><td>4. When I have a problem, I can always come up with ways to solve it</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q5</td><td>child_hopeandfuture</td><td>5. I think I have a good life</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q6</td><td>child_hopeandfuture</td><td>6. Even when I want to quit, I can think of ways to solve a problem</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q7</td><td>child_hopeandfuture</td><td>7. I think I will have a good future</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q8</td><td>child_hopeandfuture</td><td>8. Have a (another) child</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>q9</td><td>child_hopeandfuture</td><td>9. Find a job</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>remarks</td><td>child_hopeandfuture</td><td>Remarks</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>targetage</td><td>child_hopeandfuture</td><td>25. You will live to age?</td><td>frmCHHopeAndFuture</td></tr>
+			<tr><td>date</td><td>child_scoringsheet</td><td>Date of Test</td><td>frmCHMarketList</td></tr>
+			<tr><td>intv_name</td><td>child_scoringsheet</td><td>Interviewer Name</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_1</td><td>child_scoringsheet</td><td>11.1 Child was interested in the testing?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_2</td><td>child_scoringsheet</td><td>11.2 Child tried to do his or her best?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_3</td><td>child_scoringsheet</td><td>11.3 Child seemed too sick or worried to do well?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_4</td><td>child_scoringsheet</td><td>11.4 Child seemed afraid of interviewer or testing?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_5</td><td>child_scoringsheet</td><td>11.5 Child worried about being wrong?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_6</td><td>child_scoringsheet</td><td>11.6 Child enjoyed doing a good job?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_7</td><td>child_scoringsheet</td><td>11.7 Child paid attention during testing?</td><td>frmCHMarketList</td></tr>
+			<tr><td>q11_8</td><td>child_scoringsheet</td><td>11.8 The child's environment was distracting</td><td>frmCHMarketList</td></tr>
+			<tr><td>q5</td><td>child_scoringsheet</td><td>Concatenated String for Market List (90 Characters)</td><td>frmCHMarketList</td></tr>
+			<tr><td>q51</td><td>child_scoringsheet</td><td>Market List #1 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>q52</td><td>child_scoringsheet</td><td>Market List #2 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>q53</td><td>child_scoringsheet</td><td>Market List #1 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>q54</td><td>child_scoringsheet</td><td>Market List #2 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>q55</td><td>child_scoringsheet</td><td>Market List #1 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>q56</td><td>child_scoringsheet</td><td>Market List #2 - Total Score</td><td>frmCHMarketList</td></tr>
+			<tr><td>remarks</td><td>child_scoringsheet</td><td>Remarks</td><td>frmCHMarketList</td></tr>
+			<tr><td>q1</td><td>child_wellbeing_cg</td><td>CG-1 Considerate of other peoples feelings</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q10</td><td>child_wellbeing_cg</td><td>CG-10 Sleeps less than other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q11</td><td>child_wellbeing_cg</td><td>CG-11 Seems nervous or tense</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q12</td><td>child_wellbeing_cg</td><td>CG-12 Constantly moving, squirming, restless</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q13</td><td>child_wellbeing_cg</td><td>CG-13 Has at least one good friend</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q14</td><td>child_wellbeing_cg</td><td>CG-14 Does not like to be alone</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q15</td><td>child_wellbeing_cg</td><td>CG-15 Fights with other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q16</td><td>child_wellbeing_cg</td><td>CG-16 Has bad dreams</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q17</td><td>child_wellbeing_cg</td><td>CG-17 Unhappy, depressed, tearful</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q18</td><td>child_wellbeing_cg</td><td>CG-18 Liked by other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q19</td><td>child_wellbeing_cg</td><td>CG-19 Easily distracted, poor concentration</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q2</td><td>child_wellbeing_cg</td><td>CG-2 Restless, overactive, cannot be still for long</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q20</td><td>child_wellbeing_cg</td><td>CG-20 Nervous in new situations, loses self-confidence</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q21</td><td>child_wellbeing_cg</td><td>CG-21 Kind to other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q22</td><td>child_wellbeing_cg</td><td>CG-22 Lies or cheats</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q23</td><td>child_wellbeing_cg</td><td>CG-23 Picked on or bullied by other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q24</td><td>child_wellbeing_cg</td><td>CG-24 Offers to help others (adults, other children)</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q25</td><td>child_wellbeing_cg</td><td>CG-25 Thinks about things before acting</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q26</td><td>child_wellbeing_cg</td><td>CG-26 Steals things from home, school, or elsewhere</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q27</td><td>child_wellbeing_cg</td><td>CG-27 Gets along better with adults than other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q28</td><td>child_wellbeing_cg</td><td>CG-28 Many fears; child is easily scared</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q29</td><td>child_wellbeing_cg</td><td>CG-29 Good attention; finishes work to the end</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q3</td><td>child_wellbeing_cg</td><td>CG-3 Shares toys, pencils, and food with other children</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q30</td><td>child_wellbeing_cg</td><td>CG-30 Being in a big earthquake that damaged the building the child was in</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q30_last</td><td>child_wellbeing_cg</td><td>CG-30 - LAST TIME: Being in a big earthquake that damaged the building the child was in</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q31</td><td>child_wellbeing_cg</td><td>CG-31 Being in another disaster, such as a fire, storm, flood, hurricane, tsuna</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q31_last</td><td>child_wellbeing_cg</td><td>CG-31 - LAST TIME: Being in another disaster, such as a fire, storm, flood, hurricane, tsuna</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q32</td><td>child_wellbeing_cg</td><td>CG-32 Being in a bad accident, like a car accident</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q32_last</td><td>child_wellbeing_cg</td><td>CG-32 - LAST TIME: Being in a bad accident, like a car accident</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q33</td><td>child_wellbeing_cg</td><td>CG-33 Being in a place where war, riot, or conflict was going on</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q33_last</td><td>child_wellbeing_cg</td><td>CG-33 - LAST TIME: Being in a place where war, riot, or conflict was going on</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q34</td><td>child_wellbeing_cg</td><td>CG-34 Being hit, kicked, or beaten at home</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q34_last</td><td>child_wellbeing_cg</td><td>CG-34 - LAST TIME: Being hit, kicked, or beaten at home</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q35</td><td>child_wellbeing_cg</td><td>CG-35 Being hit, kicked, or beaten by other children</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q35_last</td><td>child_wellbeing_cg</td><td>CG-35 - LAST TIME: Being hit, kicked, or beaten by other children</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q36</td><td>child_wellbeing_cg</td><td>CG-36 Seeing a family member hit, kicked, or beaten</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q36_last</td><td>child_wellbeing_cg</td><td>CG-36 - LAST TIME: Seeing a family member hit, kicked, or beaten</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q37</td><td>child_wellbeing_cg</td><td>CG-37 Seeing a family member shot at or killed</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q37_last</td><td>child_wellbeing_cg</td><td>CG-37 - LAST TIME: Seeing a family member shot at or killed</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q38</td><td>child_wellbeing_cg</td><td>CG-38 Seeing someone in (childs) town shot at or killed</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q38_last</td><td>child_wellbeing_cg</td><td>CG-38 - LAST TIME: Seeing someone in (childs) town shot at or killed</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q39</td><td>child_wellbeing_cg</td><td>CG-39 Having someone touch private sexual parts when child did not want them to</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q39_last</td><td>child_wellbeing_cg</td><td>CG-39 - LAST TIME: Having someone touch private sexual parts when child did not want them to</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q4</td><td>child_wellbeing_cg</td><td>CG-4 Complains of headaches, stomach aches, or feeling sick</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q40</td><td>child_wellbeing_cg</td><td>CG-40 Being raped or sexually molested</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q40_last</td><td>child_wellbeing_cg</td><td>CG-40 - LAST TIME: Being raped or sexually molested</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q41</td><td>child_wellbeing_cg</td><td>CG-41 Seeing a family member raped or sexually molested</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q41_last</td><td>child_wellbeing_cg</td><td>CG-41 - LAST TIME: Seeing a family member raped or sexually molested</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q42</td><td>child_wellbeing_cg</td><td>CG-42 Seeing a family member die a violent death or seriously injured</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q42_last</td><td>child_wellbeing_cg</td><td>CG-42 - LAST TIME: Seeing a family member die a violent death or seriously injured</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q43</td><td>child_wellbeing_cg</td><td>CG-43 Hearing about a family member who died</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q43_last</td><td>child_wellbeing_cg</td><td>CG-43 - LAST TIME: Hearing about a family member who died</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q44</td><td>child_wellbeing_cg</td><td>CG-44 Seeing a family member die from illness</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q44_last</td><td>child_wellbeing_cg</td><td>CG-44 - LAST TIME: Seeing a family member die from illness</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q45</td><td>child_wellbeing_cg</td><td>CG-45 Have a brother or sister die</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q45_last</td><td>child_wellbeing_cg</td><td>CG-45 - LAST TIME: Have a brother or sister die</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q46</td><td>child_wellbeing_cg</td><td>CG-46 Seeing a dead body in your town</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q46_last</td><td>child_wellbeing_cg</td><td>CG-46 - LAST TIME: Seeing a dead body in your town</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q47</td><td>child_wellbeing_cg</td><td>CG-47 Having a painful or scary medical treatment when sick or hurt</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q47_last</td><td>child_wellbeing_cg</td><td>CG-47 - LAST TIME: Having a painful or scary medical treatment when sick or hurt</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q48</td><td>child_wellbeing_cg</td><td>CG-48 Seeing someone hurt or killed during a war, conflict, fighting or riots</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q48_last</td><td>child_wellbeing_cg</td><td>CG-48 - LAST TIME: Seeing someone hurt or killed during a war, conflict, fighting or riots</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q49</td><td>child_wellbeing_cg</td><td>CG-49 Being forced to move or run from home due to a war, conflict, fighting, r</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q49_last</td><td>child_wellbeing_cg</td><td>CG-49 - LAST TIME: Being forced to move or run from home due to a war, conflict, fighting, r</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q5</td><td>child_wellbeing_cg</td><td>CG-5 Gets very angry and loses temper</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q50</td><td>child_wellbeing_cg</td><td>CG-50 Being forced to leave home because there was no adult at home to stay wit</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q50_last</td><td>child_wellbeing_cg</td><td>CG-50 - LAST TIME: Being forced to leave home because there was no adult at home to stay wit</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q51</td><td>child_wellbeing_cg</td><td>CG-51 Other really bad or scary things happen to this child</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q51_last</td><td>child_wellbeing_cg</td><td>CG-51 - LAST TIME: Other really bad or scary things happen to this child</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q51t</td><td>child_wellbeing_cg</td><td>CG-51 Other - Specify</td><td>frmCHSeenAndHeard_CG</td></tr>
+			<tr><td>q6</td><td>child_wellbeing_cg</td><td>CG-6 Would rather play alone</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q7</td><td>child_wellbeing_cg</td><td>CG-7 Behaves well, does what adults ask</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q8</td><td>child_wellbeing_cg</td><td>CG-8 Seems worried</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>q9</td><td>child_wellbeing_cg</td><td>CG-9 Tries to help if someone is hurt, upset, or sick</td><td>frmCHWellBeing_CG</td></tr>
+			<tr><td>remarks</td><td>child_wellbeing_cg</td><td>Remarks</td><td>frmCHSeenAndHeard_CG frmCHWellBeing_CG</td></tr>
+			<tr><td>q1</td><td>child_wellbeing_cg34</td><td>1. Considerate of other people?s feelings</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q10</td><td>child_wellbeing_cg34</td><td>10. Constantly fidgeting or squirming.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q11</td><td>child_wellbeing_cg34</td><td>11. Has at least one good friend.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q12</td><td>child_wellbeing_cg34</td><td>12. Often fights with other children or bullies them.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q13</td><td>child_wellbeing_cg34</td><td>13. Often unhappy, down-hearted or tearful.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q14</td><td>child_wellbeing_cg34</td><td>14. Generally liked by other children.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q15</td><td>child_wellbeing_cg34</td><td>15. Easily distracted, concentration wanders.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q16</td><td>child_wellbeing_cg34</td><td>16. Nervous or clingy in new situations, easily loses confidence.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q17</td><td>child_wellbeing_cg34</td><td>17. Kind to younger children.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q18</td><td>child_wellbeing_cg34</td><td>18. Often argumentative with adults.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q19</td><td>child_wellbeing_cg34</td><td>19. Picked on or bullied by other children.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q2</td><td>child_wellbeing_cg34</td><td>2. Restless, overactive, cannot stay still for long.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q20</td><td>child_wellbeing_cg34</td><td>20. Often volunteers to help others (parents, teachers, other children).</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q21</td><td>child_wellbeing_cg34</td><td>21. Can stop and think things out before acting.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q22</td><td>child_wellbeing_cg34</td><td>22. Can be spiteful to others.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q23</td><td>child_wellbeing_cg34</td><td>23. Gets on better with adults than with other children.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q24</td><td>child_wellbeing_cg34</td><td>24. Many fears, easily scared.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q25</td><td>child_wellbeing_cg34</td><td>25. Sees tasks through to the end, good attention span.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q3</td><td>child_wellbeing_cg34</td><td>3. Often complains of headaches, stomach-aches, or sickness.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q4</td><td>child_wellbeing_cg34</td><td>4. Shares readily with other children (treats, toys, pencils, etc).</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q5</td><td>child_wellbeing_cg34</td><td>5. Often has temper tantrums or hot tempers; gets extremely upset.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q6</td><td>child_wellbeing_cg34</td><td>6. Rather solitary, tends to play alone.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q7</td><td>child_wellbeing_cg34</td><td>7. Generally obedient, usually does what adults request.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q8</td><td>child_wellbeing_cg34</td><td>8. Many worries, often seems worried.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q9</td><td>child_wellbeing_cg34</td><td>9. Helpful if someone is hurt, upset, or feeling ill.</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>remarks</td><td>child_wellbeing_cg34</td><td>Remarks</td><td>frmCHWellBeing_CG34</td></tr>
+			<tr><td>q1</td><td>child_wellbeing_sr</td><td>SR-1 I try to be nice to other people  I care about their feelings</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q10</td><td>child_wellbeing_sr</td><td>SR-10 I am constantly moving around, squirming, feel restless</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q11</td><td>child_wellbeing_sr</td><td>SR-11 I have one good friend or more</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q12</td><td>child_wellbeing_sr</td><td>SR-12 I fight a lot</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q13</td><td>child_wellbeing_sr</td><td>SR-13 I am unhappy, depressed, tearful</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q14</td><td>child_wellbeing_sr</td><td>SR-14 Other people my age like me</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q15</td><td>child_wellbeing_sr</td><td>SR-15 I am easily distracted  I find it difficult to concentrate</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q16</td><td>child_wellbeing_sr</td><td>SR-16 I am nervous in new situations  I easily lose confidence</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q17</td><td>child_wellbeing_sr</td><td>SR-17 I am kind to younger children</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q18</td><td>child_wellbeing_sr</td><td>SR-18 I am have been accused of lying or cheating</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q19</td><td>child_wellbeing_sr</td><td>SR-19 Other children or young people pick on me or bully me</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q2</td><td>child_wellbeing_sr</td><td>SR-2 I am restless  I cannot stay still for long</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q20</td><td>child_wellbeing_sr</td><td>SR-20 I offer to help others (adults, other children)</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q21</td><td>child_wellbeing_sr</td><td>SR-21 I think before doing things</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q22</td><td>child_wellbeing_sr</td><td>SR-22 I take things that are not mine from school, home, or elsewhere</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q23</td><td>child_wellbeing_sr</td><td>SR-23 I get along better with adults than with people my own age</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q24</td><td>child_wellbeing_sr</td><td>SR-24 I am afraid of many things  I am easily scared</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q25</td><td>child_wellbeing_sr</td><td>SR-25 I finish the work I am doing  My attention is good</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q26</td><td>child_wellbeing_sr</td><td>SR-26 Been in a big earthquake that damaged the building I was in</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q26_last</td><td>child_wellbeing_sr</td><td>SR-26 - LAST TIME: Been in a big earthquake that damaged the building I was in</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q27</td><td>child_wellbeing_sr</td><td>SR-27 Been in another disaster, like a fire, tornado, flood, hurricane, tsunami</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q27_last</td><td>child_wellbeing_sr</td><td>SR-27 - LAST TIME: Been in another disaster, like a fire, tornado, flood, hurricane, tsunami</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q28</td><td>child_wellbeing_sr</td><td>SR-28 Been in a bad accident, like a car accident</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q28_last</td><td>child_wellbeing_sr</td><td>SR-28 - LAST TIME: Been in a bad accident, like a car accident</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q29</td><td>child_wellbeing_sr</td><td>SR-29 Been in a place where war, conflict, fighting, or riots were going on</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q29_last</td><td>child_wellbeing_sr</td><td>SR-29 - LAST TIME: Been in a place where war, conflict, fighting, or riots were going on</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q3</td><td>child_wellbeing_sr</td><td>SR-3 I get headaches, stomachaches, or sickness</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q30</td><td>child_wellbeing_sr</td><td>SR-30 Been hit, kicked, or beaten at home</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q30_last</td><td>child_wellbeing_sr</td><td>SR-30 - LAST TIME: Been hit, kicked, or beaten at home</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q31</td><td>child_wellbeing_sr</td><td>SR-31 Been hit, kicked, or beaten by other children</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q31_last</td><td>child_wellbeing_sr</td><td>SR-31 - LAST TIME: Been hit, kicked, or beaten by other children</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q32</td><td>child_wellbeing_sr</td><td>SR-32 Saw a family member hit, kicked, or beaten</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q32_last</td><td>child_wellbeing_sr</td><td>SR-32 - LAST TIME: Saw a family member hit, kicked, or beaten</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q33</td><td>child_wellbeing_sr</td><td>SR-33 Saw a family member shot at or killed</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q33_last</td><td>child_wellbeing_sr</td><td>SR-33 - LAST TIME: Saw a family member shot at or killed</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q34</td><td>child_wellbeing_sr</td><td>SR-34 Saw someone in the town shot at or killed</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q34_last</td><td>child_wellbeing_sr</td><td>SR-34 - LAST TIME: Saw someone in the town shot at or killed</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q35</td><td>child_wellbeing_sr</td><td>SR-35 Someone touched my private sexual parts when I did not want them to</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q35_last</td><td>child_wellbeing_sr</td><td>SR-35 - LAST TIME: Someone touched my private sexual parts when I did not want them to</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q36</td><td>child_wellbeing_sr</td><td>SR-36 I was raped or sexually molested</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q36_last</td><td>child_wellbeing_sr</td><td>SR-36 - LAST TIME: I was raped or sexually molested</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q37</td><td>child_wellbeing_sr</td><td>SR-37 I saw a family member raped or sexually molested</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q37_last</td><td>child_wellbeing_sr</td><td>SR-37 - LAST TIME: I saw a family member raped or sexually molested</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q38</td><td>child_wellbeing_sr</td><td>SR-38 Saw a family member die a violent death or be seriously injured</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q38_last</td><td>child_wellbeing_sr</td><td>SR-38 - LAST TIME: Saw a family member die a violent death or be seriously injured</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q39</td><td>child_wellbeing_sr</td><td>SR-39 Heard about a family member who died</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q39_last</td><td>child_wellbeing_sr</td><td>SR-39 - LAST TIME: Heard about a family member who died</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q4</td><td>child_wellbeing_sr</td><td>SR-4 I share with others, for example toys and food</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q40</td><td>child_wellbeing_sr</td><td>SR-40 Seen a family member die from illness</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q40_last</td><td>child_wellbeing_sr</td><td>SR-40 - LAST TIME: Seen a family member die from illness</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q41</td><td>child_wellbeing_sr</td><td>SR-41 Have a brother or sister who has died</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q41_last</td><td>child_wellbeing_sr</td><td>SR-41 - LAST TIME: Have a brother or sister who has died</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q42</td><td>child_wellbeing_sr</td><td>SR-42 Seen a dead body in my town</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q42_last</td><td>child_wellbeing_sr</td><td>SR-42 - LAST TIME: Seen a dead body in my town</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q43</td><td>child_wellbeing_sr</td><td>SR-43 Had a painful or scary medical treatment when sick or hurt</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q43_last</td><td>child_wellbeing_sr</td><td>SR-43 - LAST TIME: Had a painful or scary medical treatment when sick or hurt</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q44</td><td>child_wellbeing_sr</td><td>SR-44 Seen someone hurt or killed during a war</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q44_last</td><td>child_wellbeing_sr</td><td>SR-44 - LAST TIME: Seen someone hurt or killed during a war</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q45</td><td>child_wellbeing_sr</td><td>SR-45 Was forced to move or run from home due to a war, conflict, fighting</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q45_last</td><td>child_wellbeing_sr</td><td>SR-45 - LAST TIME: Was forced to move or run from home due to a war, conflict, fighting</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q46</td><td>child_wellbeing_sr</td><td>SR-46 Was forced to move from home because there was no one (adult) there to st</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>q46_last</td><td>child_wellbeing_sr</td><td>SR-46 - LAST TIME: Was forced to move from home because there was no one (adult) there to st</td><td>frmCHSeenAndHeard_SR</td></tr>
+			<tr><td>q5</td><td>child_wellbeing_sr</td><td>SR-5 I get very angry and lose my temper</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q6</td><td>child_wellbeing_sr</td><td>SR-6 I would rather be alone than with others my age</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q7</td><td>child_wellbeing_sr</td><td>SR-7 I do what adults tell me to do</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q8</td><td>child_wellbeing_sr</td><td>SR-8 I worry a lot</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>q9</td><td>child_wellbeing_sr</td><td>SR-9 I am helpful if someone is hurt, upset, or feeling ill</td><td>frmCHWellBeing_SR</td></tr>
+			<tr><td>remarks</td><td>child_wellbeing_sr</td><td>SR-Remarks</td><td>frmCHSeenAndHeard_SR frmCHWellBeing_SR</td></tr>
+			<tr><td>agebl_mm</td><td>childmaster</td><td>Child Age At Baseline - Months</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>agebl_yy</td><td>childmaster</td><td>Child Age At Baseline - Years</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>consentdate0</td><td>childmaster</td><td>Child Enrollment Date - Date Of Caregiver Consent</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>dob_dd</td><td>childmaster</td><td>Child Date Of Birth - Day</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>dob_mm</td><td>childmaster</td><td>Child Date Of Birth - Month</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>dob_yy</td><td>childmaster</td><td>Child Date Of Birth - Year</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>ethnicity</td><td>childmaster</td><td>Child Ethnicity</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>fname</td><td>childmaster</td><td>Child First Name</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>gender</td><td>childmaster</td><td>Child Gender</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>lname</td><td>childmaster</td><td>Child Last Name</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>ovc</td><td>childmaster</td><td>Is the child an Orphan or Vulnerable Child?</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>address</td><td>childrelationship</td><td>Current Address</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>age_mm</td><td>childrelationship</td><td>Current Age, months</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>age_yy</td><td>childrelationship</td><td>Current Age, years</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>cg_age</td><td>childrelationship</td><td>Caregiver Age</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>cg_gender</td><td>childrelationship</td><td>Caregiver Gender</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>cg_name</td><td>childrelationship</td><td>Caregiver Name</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>cginterviewdate</td><td>childrelationship</td><td>Child Interview: Date</td><td>frm00_NewChildMaster frm00_TrackingSheet frmBL1_ChildSurvey frmBL2_CaregiverSurvey frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>cginterviewer</td><td>childrelationship</td><td>Caregiver Interview: Interviewer</td><td>frm00_NewChildMaster frm00_TrackingSheet frmBL1_ChildSurvey frmBL2_CaregiverSurvey frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>childinterviewdate</td><td>childrelationship</td><td>Child Interview: Date</td><td>frm00_NewChildMaster frm00_TrackingSheet frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>childinterviewer</td><td>childrelationship</td><td>Child Interview: Interviewer</td><td>frm00_NewChildMaster frm00_TrackingSheet frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>childknowsf</td><td>childrelationship</td><td>Child knows that father died</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>childknowsm</td><td>childrelationship</td><td>Child knows that mother died</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>consentdate</td><td>childrelationship</td><td>New Consent? Date</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>consentinterviewer</td><td>childrelationship</td><td>New Consent? Interviewer</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>fatherinhh</td><td>childrelationship</td><td>Father lives in the household</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>fathermod</td><td>childrelationship</td><td>Father month of death</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>fatherstatus</td><td>childrelationship</td><td>10A. Is Father Still Living?  1-Alive 2-Dead 3-Unknown</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>fatheryod</td><td>childrelationship</td><td>Father year of death</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>liveswithcg</td><td>childrelationship</td><td>Child lives with CG most of the time?</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>motherinhh</td><td>childrelationship</td><td>Mother lives in the household</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>mothermod</td><td>childrelationship</td><td>Mother month of death</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>motherstatus</td><td>childrelationship</td><td>3A. Is Mother Still Living?  1-Alive 2-Dead 3-Unknown</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>motheryod</td><td>childrelationship</td><td>Mother year of death</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>moved</td><td>childrelationship</td><td>Moved?</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>moved_specify</td><td>childrelationship</td><td>Moved?  How many times?</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>newcg</td><td>childrelationship</td><td>New Caregiver?</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>newdistrict</td><td>childrelationship</td><td>Moved to new District?</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>newhh</td><td>childrelationship</td><td>New Household?</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>phone</td><td>childrelationship</td><td>Phone number</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>q1</td><td>childrelationship</td><td>1. What Is (Childs) Relationship To You?</td><td>frm00_TrackingSheet frmBL1_ChildSurvey</td></tr>
+			<tr><td>q1t</td><td>childrelationship</td><td>1. What Is (Childs) Relationship To You? Specify</td><td>frm00_TrackingSheet frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx1</td><td>childrelationship</td><td>X1. How Long Have You Known The Child? - Option</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx11_months</td><td>childrelationship</td><td>X1. How Long Have You Known The Child? - Months</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx11_years</td><td>childrelationship</td><td>X1. How Long Have You Known The Child? - Years</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx2</td><td>childrelationship</td><td>X2. How Long Have You Been The Primary Caregiver For This Child? - Option</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx21_months</td><td>childrelationship</td><td>X2. How Long Have You Been The Primary Caregiver For This Child? - Months</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx21_years</td><td>childrelationship</td><td>X2. How Long Have You Been The Primary Caregiver For This Child? - Years</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx3</td><td>childrelationship</td><td>X3. Has the child lived in any other households?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx3a_households</td><td>childrelationship</td><td>X3a. How many households has this child lived in during his/her life?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx4</td><td>childrelationship</td><td>X4. Has this child ever lived in an institution during his/ her lifetime?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx4_fromyear</td><td>childrelationship</td><td>X4. Has this child ever lived in an institution - From Year</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx4_thruyear</td><td>childrelationship</td><td>X4. Has this child ever lived in an institution - Thru Year</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx5</td><td>childrelationship</td><td>X5. Has this child ever been homeless, or ever lived between several households....?</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx5_fromyear</td><td>childrelationship</td><td>X5. Has this child ever been homeless, ? - From Year</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>qx5_thruyear</td><td>childrelationship</td><td>X5. Has this child ever been homeless, ? - Thru Year</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>village</td><td>childrelationship</td><td>Village</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>assetlist</td><td>hh_assetsurvey</td><td>Assetlist</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>cg_count</td><td>hh_composition</td><td>Total number of primary caregivers</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>child_age1</td><td>hh_composition</td><td>HH Composition: Age, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age2</td><td>hh_composition</td><td>HH Composition: Age, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age3</td><td>hh_composition</td><td>HH Composition: Age, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age4</td><td>hh_composition</td><td>HH Composition: Age, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age5</td><td>hh_composition</td><td>HH Composition: Age, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age6</td><td>hh_composition</td><td>HH Composition: Age, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age7</td><td>hh_composition</td><td>HH Composition: Age, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age8</td><td>hh_composition</td><td>HH Composition: Age, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_age9</td><td>hh_composition</td><td>HH Composition: Age, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological1</td><td>hh_composition</td><td>HH Composition: Biological child, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological2</td><td>hh_composition</td><td>HH Composition: Biological child, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological3</td><td>hh_composition</td><td>HH Composition: Biological child, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological4</td><td>hh_composition</td><td>HH Composition: Biological child, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological5</td><td>hh_composition</td><td>HH Composition: Biological child, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological6</td><td>hh_composition</td><td>HH Composition: Biological child, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological7</td><td>hh_composition</td><td>HH Composition: Biological child, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological8</td><td>hh_composition</td><td>HH Composition: Biological child, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_biological9</td><td>hh_composition</td><td>HH Composition: Biological child, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender1</td><td>hh_composition</td><td>HH Composition: Gender, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender2</td><td>hh_composition</td><td>HH Composition: Gender, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender3</td><td>hh_composition</td><td>HH Composition: Gender, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender4</td><td>hh_composition</td><td>HH Composition: Gender, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender5</td><td>hh_composition</td><td>HH Composition: Gender, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender6</td><td>hh_composition</td><td>HH Composition: Gender, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender7</td><td>hh_composition</td><td>HH Composition: Gender, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender8</td><td>hh_composition</td><td>HH Composition: Gender, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_gender9</td><td>hh_composition</td><td>HH Composition: Gender, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial1</td><td>hh_composition</td><td>HH Composition: Initials, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial2</td><td>hh_composition</td><td>HH Composition: Initials, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial3</td><td>hh_composition</td><td>HH Composition: Initials, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial4</td><td>hh_composition</td><td>HH Composition: Initials, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial5</td><td>hh_composition</td><td>HH Composition: Initials, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial6</td><td>hh_composition</td><td>HH Composition: Initials, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial7</td><td>hh_composition</td><td>HH Composition: Initials, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial8</td><td>hh_composition</td><td>HH Composition: Initials, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_initial9</td><td>hh_composition</td><td>HH Composition: Initials, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school1</td><td>hh_composition</td><td>HH Composition: Schooling, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school2</td><td>hh_composition</td><td>HH Composition: Schooling, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school3</td><td>hh_composition</td><td>HH Composition: Schooling, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school4</td><td>hh_composition</td><td>HH Composition: Schooling, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school5</td><td>hh_composition</td><td>HH Composition: Schooling, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school6</td><td>hh_composition</td><td>HH Composition: Schooling, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school7</td><td>hh_composition</td><td>HH Composition: Schooling, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school8</td><td>hh_composition</td><td>HH Composition: Schooling, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_school9</td><td>hh_composition</td><td>HH Composition: Schooling, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target1</td><td>hh_composition</td><td>HH Composition: Target Child, child #1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target2</td><td>hh_composition</td><td>HH Composition: Target Child, child #2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target3</td><td>hh_composition</td><td>HH Composition: Target Child, child #3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target4</td><td>hh_composition</td><td>HH Composition: Target Child, child #4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target5</td><td>hh_composition</td><td>HH Composition: Target Child, child #5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target6</td><td>hh_composition</td><td>HH Composition: Target Child, child #6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target7</td><td>hh_composition</td><td>HH Composition: Target Child, child #7</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target8</td><td>hh_composition</td><td>HH Composition: Target Child, child #8</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>child_target9</td><td>hh_composition</td><td>HH Composition: Target Child, child #9</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>newdeaths</td><td>hh_composition</td><td>Any new deaths (concatenated)</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>newdeaths</td><td>hh_composition</td><td>New Deaths since last round, concatenated</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>newdeaths_specify</td><td>hh_composition</td><td>Any new deaths, other,specify</td><td>frm00_TrackingSheet</td></tr>
+			<tr><td>newdeaths_specify</td><td>hh_composition</td><td>New Deaths since last round, other, specify</td><td>frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>qhx1_adults</td><td>hh_composition</td><td>Hx0. How Many Rooms Are Used For Sleeping In Your Household?   Adults (22 In Hh1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>qhx1_children</td><td>hh_composition</td><td>Hx0. How Many Rooms Are Used For Sleeping In Your Household?   Children (23 In H</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>qhx1_siblings</td><td>hh_composition</td><td>How many are siblings of child:</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>qhx4a_1</td><td>hh_composition</td><td>Hx4. Who Does The Child Go To If S/He Is Hurt?  Who Does S/He Go To If S/He Is S</td><td>frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117 frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>qhx4a_2</td><td>hh_composition</td><td>Hx4. Who Does The Child Go To If S/He Is Hurt?  Who Does S/He Go To If S/He Is S</td><td>frmBL1b_SelfReport_1117 frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>faccode1</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>faccode2</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>faccode3</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>faccode4</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>faccode5</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>faccode6</td><td>hh_healthcareaccess</td><td>Facility Code - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist1</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist2</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist3</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist4</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist5</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facdist6</td><td>hh_healthcareaccess</td><td>Facility Distance - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname1</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname2</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname3</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname4</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname5</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>facname6</td><td>hh_healthcareaccess</td><td>Facility Name - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime1</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime2</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime3</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime4</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime5</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>factime6</td><td>hh_healthcareaccess</td><td>Facility Time - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit1</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit2</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit3</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit4</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit5</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>lastvisit6</td><td>hh_healthcareaccess</td><td>Facility Last Visit - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode1</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 1</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode2</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 2</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode3</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 3</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode4</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 4</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode5</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 5</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>mode6</td><td>hh_healthcareaccess</td><td>Facility Travel Mode - Facility 6</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q40</td><td>hh_incomesupport</td><td>40. Income From Salaried Work?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q41</td><td>hh_incomesupport</td><td>41. Income From Casual Labor?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q42</td><td>hh_incomesupport</td><td>42. Income From Gifts/Donations/Charity?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q43</td><td>hh_incomesupport</td><td>43. Income From Self-Employed Business?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44a</td><td>hh_incomesupport</td><td>44A. Income From Farming Own Plot?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_0</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_1</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_2</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_3</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_4</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_5</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q44b_6</td><td>hh_incomesupport</td><td>44B. Do You Have Livestock?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q46a</td><td>hh_incomesupport</td><td>46A. Income From Any Other Sources?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q46b</td><td>hh_incomesupport</td><td>46A. Income From Any Other Sources?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q47</td><td>hh_incomesupport</td><td>47. Does Your Household Grow Any Food Crops?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xm1</td><td>hh_incomesupport</td><td>XM1. Has anyone received training for IGAs?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xm2</td><td>hh_incomesupport</td><td>XM2. Has anyone received a cash loan for IGAs?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xm3</td><td>hh_incomesupport</td><td>XM3. Has anyone received a cash GRANT for IGAs?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xm4</td><td>hh_incomesupport</td><td>XM4. How far is this household from the village centre?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xmsource1</td><td>hh_incomesupport</td><td>XM1. Has anyone received training for IGAs - Source</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xmsource2</td><td>hh_incomesupport</td><td>XM2. Has anyone received a cash loan for IGAs? - Source</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>xmsource3</td><td>hh_incomesupport</td><td>XM3. Has anyone received a cash GRANT for IGAs? - Source</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q28</td><td>hh_physical</td><td>28. Observe Main Material Of Floor.</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q28_specify</td><td>hh_physical</td><td>28. Observe Main Material Of Floor - Specify</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q29</td><td>hh_physical</td><td>29. Observe Main Material Of Walls.</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q29_specify</td><td>hh_physical</td><td>29. Observe Main Material Of Walls - Specify</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q30</td><td>hh_physical</td><td>30. Observe Main Material Of Roof.</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q30_specify</td><td>hh_physical</td><td>30. Observe Main Material Of Roof - Specify</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q35</td><td>hh_physical</td><td>35. What Is The Main Source Of Drinking Water For Members Of Your Household?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q35_specify</td><td>hh_physical</td><td>35. What Is The Main Source Of Drinking Water For Members Of Your Household? - S</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q36</td><td>hh_physical</td><td>36. How Long Does It Take You To Go There, Get Water, And Come Back? - Option</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q36_minutes</td><td>hh_physical</td><td>36. How Long Does It Take You To Go There, Get Water, And Come Back? - Minutes</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q37</td><td>hh_physical</td><td>37A. What Kind Of Toilet Facility Do Most Members Of Your Household Use?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q37_specify</td><td>hh_physical</td><td>37A. What Kind Of Toilet Facility Do Most Members Of Your Household Use? - Speci</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q38</td><td>hh_physical</td><td>38. What Is Your Source Of Electricity?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q38_specify</td><td>hh_physical</td><td>38. What Is Your Source Of Electricity? - Specify</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q39</td><td>hh_physical</td><td>39. Excluding The Bathroom, How Many Rooms Does This Household Use?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>q39a</td><td>hh_physical</td><td>39a. How many rooms are used for sleeping?</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>address</td><td>householdmaster</td><td>Address</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>phone</td><td>householdmaster</td><td>Phone number</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>village</td><td>householdmaster</td><td>Village</td><td>frm00_NewChildMaster</td></tr>
+			<tr><td>caregiverremarks</td><td>tbldataentry</td><td>Remarks</td><td>frmBL2_CaregiverSurvey</td></tr>
+			<tr><td>childremarks</td><td>tbldataentry</td><td>Remarks</td><td>frmBL1_ChildSurvey</td></tr>
+			<tr><td>householdremarks</td><td>tbldataentry</td><td>Remarks</td><td>frmBL3_HouseholdSurvey</td></tr>
+			<tr><td>notes</td><td>tbldataentry</td><td>Notes</td><td>frm00_NewChildMaster frm00_TrackingSheet</td></tr>
+			<tr><td>selfreportremarks</td><td>tbldataentry</td><td>Remarks</td><td>frmBL1a_SelfReport_0510 frmBL1b_SelfReport_1117</td></tr>
+			<tr><td>contactname</td><td>villagemaster</td><td>Contact Name</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>contactposition</td><td>villagemaster</td><td>Contact Position</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>districtid</td><td>villagemaster</td><td>District ID</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>notes</td><td>villagemaster</td><td>Notes</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>phone</td><td>villagemaster</td><td>Phone</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>ruralurban</td><td>villagemaster</td><td>Rural / Urban</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>taid</td><td>villagemaster</td><td>TA ID</td><td>frm00_VillageMaster</td></tr>
+			<tr><td>villagename</td><td>villagemaster</td><td>Village name</td><td>frm00_VillageMaster</td></tr>
+        </tbody>
+    </table>
+	<footer>This uses the wonderful <a href="http://www.picnet.com.au/picnet_table_filter.html">PicNet table filter plugin</a>.</footer>
+</body>
+</html>
