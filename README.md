@@ -7,8 +7,8 @@ Available searches
 
 Variable search is available for the following projects, accessible online:
 
+- [COPE](http://chpir.github.com/variable_search/cope)
 - [POFO](http://chpir.github.com/variable_search/pofo)
-- MOVE (coming soon)
-- COPE (coming soon)
+- [MOVE](http://chpir.github.com/variable_search/move)
 
 You can also run these searches locally by `git clone`ing this repository and opening the appropriate `.html` file.
