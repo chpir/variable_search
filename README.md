@@ -1,4 +1,4 @@
-Variable search is a client-side JavaScript application for searching database variables. This was created for internal use by CHPIR's data analysts.
+**variable_search** is a client-side JavaScript application for searching database variables. This was created for internal use by CHPIR's data analysts.
 
 Variables and associated metadata are saved statically in HTML files for each project. These files have minimal markup; all the logic and almost all the content is handled in the external JavaScript files.
 
